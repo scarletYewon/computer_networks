@@ -56,11 +56,22 @@ while (1):
     d = s.recv(1024)
     if not d:
       break
-      print("아무것도없음")
     response += d
+    # print(f"Current Downloading {sum}/{total} (bytes) {(sum/total)*100}%",end="\r")
+
+
 
   headers =  response.split(b'\r\n\r\n')[0]
   image = response[len(headers)+4:]
+
+   # 전체 응답 크기 파악
+  total = None
+  for i in headers.split(b'\r\n'):
+    if i.startswith(b'Content-Length:'):
+      total = int(i.split(b':')[1])
+      break
+      
+  print("Total Size",total,"bytes")
 
   # 상태코드에 따른 에러처리
   sCode = headers.split(b'\r\n')[0].decode()
@@ -70,17 +81,7 @@ while (1):
     continue
 
 
-
-  a = headers.split(b'\r\n')[6]
-  b = a.split()[1]
-  total = int(b.decode())
-  sum = 0
-
-  # 퍼센테이지 출력해야뎀 sum에 더해서 총 값 받아줄거임
-
-
   # 마지막 출력
-  print("Total Size",total,"bytes")
   print("Download Complete:",f"{serverName[3:][1]},",f"{sum}/{total}","\r\n")
 
   # save image
