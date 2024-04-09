@@ -2,7 +2,7 @@ import socket
 import select
 
 print("Student ID : 20213047")
-print("Name : Yewon Lee")
+print("Name : Yewon Lee\n")
 
 while (True):
   # 소켓생성
@@ -74,7 +74,7 @@ while (True):
       for i in headers.split(b'\r\n'):
         if i.startswith(b'Content-Length:'):
           total = int(i.split(b':')[1])
-          print("Total size",total,"bytes")
+          print("Total Size",total,"bytes")
           tmp+=1
           break
 
