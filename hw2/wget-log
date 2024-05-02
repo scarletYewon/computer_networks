@@ -1,0 +1,12 @@
+--2024-05-03 05:59:28--  http://localhost:100/biga.html
+Resolving localhost (localhost)... 127.0.0.1, ::1
+Connecting to localhost (localhost)|127.0.0.1|:100... connected.
+HTTP request sent, awaiting response... Read error (Operation timed out) in headers.
+Retrying.
+
+--2024-05-03 05:59:39--  (try: 2)  http://localhost:100/biga.html
+Connecting to localhost (localhost)|127.0.0.1|:100... failed: Operation timed out.
+Connecting to localhost (localhost)|::1|:100... failed: Connection refused.
+Resolving localhost (localhost)... 127.0.0.1, ::1
+Connecting to localhost (localhost)|127.0.0.1|:100... failed: Operation timed out.
+Connecting to localhost (localhost)|::1|:100... failed: Connection refused.
