@@ -46,7 +46,7 @@ while (True):
 
   # quit이면
   elif (data[0] == "quit"):
-    exit(1)
+    exit(0)
 
   # 응답받기
   response = b''
@@ -94,13 +94,6 @@ while (True):
   # headers =  response.split(b'\r\n\r\n')[0]
   image = response[len(headers)+4:]
 
-  # # 상태코드에 따른 에러처리
-  # sCode = headers.split(b'\r\n')[0].decode()
-  # status = sCode.split()
-  # if (int(status[1]) != 200):
-  #   print(" ".join(status[1:]),"\r\n")
-  #   continue
-
   # 마지막 출력
   print("Download Complete:",f"{serverName[-1]},",f"{progress}/{total}","\r\n")
 
@@ -108,5 +101,6 @@ while (True):
   f = open(serverName[-1], 'wb')
   f.write(image)
   f.close()
+  
   # 소켓 연결 종료
   s.close()
