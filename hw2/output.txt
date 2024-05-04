@@ -1,21 +1,21 @@
 Student ID : 20213047
 Name : Yewon Lee
-Connection : Host IP 127.0.0.1, Port 49621, socket 4
+Connection : Host IP 127.0.0.1, Port 49827, socket 4
 GET /biga.html HTTP/1.1
 User-Agent: Wget/1.24.
 7 headers
 finish 10818, 10818
-Connection : Host IP 127.0.0.1, Port 49622, socket 4
+Connection : Host IP 127.0.0.1, Port 49828, socket 4
 GET /a.html HTTP/1.1
 User-Agent: Wget/1.24.
 7 headers
 finish 44, 44
-Connection : Host IP 127.0.0.1, Port 49625, socket 4
+Connection : Host IP 127.0.0.1, Port 49830, socket 4
 GET /b.html HTTP/1.1
 User-Agent: Wget/1.24.
 7 headers
 finish 44, 44
-Connection : Host IP 127.0.0.1, Port 49626, socket 4
+Connection : Host IP 127.0.0.1, Port 49831, socket 4
 GET /palladio.jpg HTTP/1.1
 User-Agent: Wget/1.24.
 7 headers
